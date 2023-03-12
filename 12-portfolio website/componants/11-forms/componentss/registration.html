@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            width: 100%;
+            height: 8vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 22px;
+        }
+
+        .container {
+            width: 100%;
+            height: 92vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid red; */
+        }
+
+        form {
+            background-color: white;
+            color: black;
+            width: 250px;
+            max-height: 700px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            -webkit-box-shadow: 0px 0px 14px 2px rgb(117, 114, 117);
+            -moz-box-shadow: 0px 0px 14px 2px rgb(130, 124, 130);
+            box-shadow: 0px 0px 14px 2px rgb(116, 114, 116);
+        }
+
+        form img {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            display: flex;
+
+        }
+
+        .dt {
+            width: 100%;
+            height: 7vh;
+            /* border: 1px solid red; */
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        input {
+            height: 60%;
+            outline: none;
+            border: 0.5px solid black;
+            padding-left: 5px;
+        }
+
+        .dtt {
+            height: 15vh;
+        }
+
+        textarea {
+            /* width: 100%; */
+            height: 10vh;
+            border: 1px solid black;
+            outline: none;
+            padding: 5px;
+        }
+
+        input:active {
+            background-color: rgba(9, 9, 9, 0.208);
+        }
+
+        p {
+            width: 100%;
+            height: 4vh;
+            /* border: 1px solid red; */
+        }
+
+        button {
+            width: 100%;
+            height: 4vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(22, 26, 247, 0.927);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to VA CODE</h1>
+    <div class="container">
+        <form action="" method="POST">
+            <h2>Registration Form</h2>
+
+            <div class="dt">
+                <label for="name">Username</label>
+                <input type="text" placeholder="Username">
+            </div>
+
+            <div class="dt">
+                <label for="pswd">Password</label>
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="dt">
+                <label for="fname">Father's Name</label>
+                <input type="text" placeholder="Father's Name">
+            </div>
+            <div class="dt">
+                <label for="email">Gmail</label>
+                <input type="email" placeholder="enter you gmail">
+            </div>
+            <div class="dt">
+                <label for="pnumber">Phone Number</label>
+                <input type="text" placeholder="Enter you number">
+            </div>
+            <div class="dt dtt">
+                <label for="address">Address</label>
+                <textarea name="txtarea" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <!-- <p><a href="/componentss/forget.html"><label for="name">Forgot password?</label></a></p> -->
+            <button type="submit">Login</button>
+            <p>back to <a href="../login.html">Login page</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

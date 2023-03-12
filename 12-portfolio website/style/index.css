@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Clicker+Script&family=Cookie&family=Covered+By+Your+Grace&family=Niconne&family=Playball&family=Roboto:wght@300&family=Sacramento&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+}
+
+.welcom {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  background-color: #ffffff;
+  z-index: 9999999999999;
+}
+.welcom .wlcmmsg {
+  margin: 10px;
+  width: 260px;
+  background-color: white;
+  height: 160px;
+  z-index: 990000;
+  border-radius: 5px;
+  position: relative;
+  padding: 25px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px -1px 29px 0px rgba(158, 146, 158, 0.81);
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAAXNSR0IArs4c6QAAABdJREFUGFdjZMACGEkS/M/AwICiA6t2ACegAQYwDyJAAAAAAElFTkSuQmCC) repeat;
+}
+
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  background-position: center;
+  background-size: cover;
+  z-index: 990000;
+}
+.preloader img {
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: auto;
+}
+body .active {
+  opacity: 1;
+  color: black;
+}
+body #menu {
+  position: fixed;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  left: 29px;
+  display: none;
+}
+body .navigation {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 18vh;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+body .navigation .time {
+  padding: 2px;
+  margin: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 150px;
+  height: 7vh;
+  font-size: 1.3em;
+  border-radius: 5px;
+}
+body .navigation .time .samay {
+  animation: color-change-2x 2s linear infinite alternate both;
+}
+@keyframes color-change-2x {
+  0% {
+    color: #dcea19;
+  }
+  100% {
+    color: #2c9dff;
+  }
+}
+body .navigation .time .evrystamp {
+  padding: 5px;
+  font-family: sans-serif;
+}
+body .navigation .nav_container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+body .navigation .nav_container .right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 585;
+}
+body .navigation .nav_container .right ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+body .navigation .nav_container .right ul li {
+  margin: 3vh;
+  padding: 2px;
+  position: relative;
+}
+body .navigation .nav_container .right ul li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  margin-right: 3px;
+  font-family: "Bad Script", cursive;
+}
+body .navigation .nav_container .right ul li a img {
+  width: 25px;
+  height: 25px;
+  margin: 3px;
+  opacity: 0;
+  z-index: 600;
+}
+body .navigation .nav_container .right ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(5, 5, 5);
+  left: 2px;
+  opacity: 0;
+}
+body .navigation .nav_container .right ul li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(7, 7, 7);
+  bottom: 0;
+  left: 2px;
+  opacity: 0;
+  transition: all ease-in-out 0.4ms;
+}
+body .navigation .nav_container .right ul li:hover::before {
+  opacity: 1;
+}
+body .navigation .nav_container .right ul li:hover::after {
+  opacity: 1;
+  top: 0px;
+}
+body .navigation .nav_container .right ul li:hover a {
+  color: rgb(255, 7, 7);
+}
+body .navigation .nav_container .right ul li:hover img {
+  opacity: 1;
+}
+body .navigation .nav_container #logo {
+  position: absolute;
+  border: 3px solid black;
+}
+body .main_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+body .main_body .homePage {
+  width: 90%;
+  height: 80%;
+  position: relative;
+  background-color: #EEEEEE;
+}
+body .main_body .homePage #parl1 {
+  width: auto;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  z-index: 50;
+  margin-right: 10px;
+}
+body .main_body .homePage .title {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+body .main_body .homePage .title p {
+  font-family: "Bad Script", cursive;
+  font-size: 38px;
+  right: 0;
+  bottom: 50%;
+  position: absolute;
+}
+body .main_body .homePage .title .mt1 {
+  position: absolute;
+  width: 50vw;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+}
+body .main_body .homePage .title .mt1 {
+  width: 100%;
+  height: auto;
+}
+body .main_body .homePage .title .mt1 {
+  opacity: 0.3;
+  top: 0;
+  width: 70%;
+  height: 70%;
+}
+body .main_body .homePage .title .descript {
+  position: absolute;
+  bottom: 0;
+  right: 4vw;
+  width: 50%;
+  height: 100%;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  /* From https://css.glass */
+}
+body .main_body .homePage .title .descript .des {
+  max-width: 100%;
+  max-height: 100%;
+  font-size: 35px;
+  flex-wrap: wrap;
+  padding: 5px 20px 20px;
+  font-family: "Bad Script", cursive;
+  align-items: center;
+  color: #FF8787;
+  font-family: "Cookie", cursive;
+}
+body .main_body .homePage .title .descript .des .typing {
+  font-size: 45px;
+  color: #5c04ff;
+}
+body .main_body .homePage .title .descript .des div {
+  font-size: 3rem;
+  margin: 10px;
+  color: #000000;
+  animation: jello-horizontal 3s infinite both;
+  -webkit-animation: jello-horizontal 3s infinite both;
+  font-family: "Cookie", cursive;
+}
+body .secondpage {
+  width: 100%;
+  height: 90vh;
+  background-color: white;
+}
+body .secondpage .secUp {
+  width: 100%;
+  height: 70%;
+  background-color: white;
+  padding: 10px;
+}
+body .secondpage .secUp .abtDsc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+body .secondpage .secUp .abtDsc span {
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .secondpage .secUp .abtDsc span img {
+  width: 95%;
+  height: auto;
+}
+body .secondpage .secUp .abtDsc span:hover img {
+  transform: scale(1.1);
+}
+body .secondpage .secdn {
+  width: 100%;
+  height: 20%;
+  background-color: rgba(0, 0, 0, 0.852);
+}
+body .secondpage .secdn marquee {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 100px;
+  color: #999999;
+  font-family: "Courier New", Courier, monospace;
+}
+body .secondpage .secdn marquee:hover {
+  color: #fff;
+  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+body .thirdPage {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .thirdPage img {
+  display: none;
+}
+body .thirdPage .thirdBox {
+  padding: 0px 10%;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .thirdPage .thirdBox h2 {
+  width: 100%;
+  max-height: 15%;
+  display: flex;
+  align-items: end;
+  font-size: 35px;
+  flex-wrap: wrap;
+}
+body .thirdPage .thirdBox p {
+  width: 100%;
+  max-height: 85%;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: rgba(7, 7, 7, 0.7725490196);
+}
+body .thirdPage .thirdBox p span {
+  width: 100%;
+  height: auto;
+}
+body .thirdPage .thirdBox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+body .fourthPage {
+  width: 100%;
+  height: 100vh;
+  background-color: #C0EEE4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+body .fourthPage img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+body .fourthPage .blog {
+  width: 97%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .fourthPage .blog .link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  flex-wrap: wrap;
+}
+body .fourthPage .blog .link .box1 {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10%;
+  margin: 7px;
+}
+body .fourthPage .blog .link .box1 img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+body .fourthPage .blog .link .box1 .box1Des {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #A31ACB;
+  bottom: -100%;
+  transition: 0.3s all ease-in-out;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .fourthPage .blog .link .box1 .box1Des p {
+  font-size: 17px;
+  color: #EEEEEE;
+}
+body .fourthPage .blog .link .box1 .box1Des a {
+  font-size: 20px;
+  color: white;
+}
+body .fourthPage .blog .link .box1 .box1Des a:hover {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+body .fourthPage .blog .link .box1:hover .box1Des {
+  bottom: 0%;
+}
+body .fourthPage .blog .link .box1:hover .box1 {
+  height: 400px;
+}
+body .fourthPage .blog .link ul li {
+  margin: 5px;
+  list-style: none;
+  border-bottom: 1px solid rgba(28, 26, 26, 0.675);
+}
+body .fourthPage .blog .link ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: all ease 0.5s;
+  font-size: 20px;
+}
+body .fourthPage .blog .link ul li a:hover {
+  color: red;
+  transform: scale(1.3);
+}
+body .fifthPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+body .fifthPage .contactUs {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body .fifthPage .contactUs form {
+  width: 600px;
+  height: 500px;
+}
+body .fifthPage .contactUs form .detail {
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  align-items: center;
+}
+body .fifthPage .contactUs form .detail button {
+  padding: 5px;
+  font-size: 20px;
+  width: 55%;
+  height: 35px;
+  border: none;
+  outline: none;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Bad Script", cursive;
+  background-color: rgba(245, 113, 131, 0.5921568627);
+}
+body .fifthPage .contactUs form .detail button:hover {
+  background-color: #FF8E9E;
+  color: white;
+}
+body .fifthPage .contactUs form .detail label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3em;
+  width: 25%;
+  height: 100%;
+  font-family: "Bad Script", cursive;
+}
+body .fifthPage .contactUs form .detail input,
+body .fifthPage .contactUs form .detail p {
+  padding: 5px;
+  font-size: 16px;
+  width: 55%;
+  height: 35px;
+  border: 0.5px solid rgba(0, 0, 0, 0.208);
+  outline: none;
+}
+body .fifthPage .contactUs form .textareaa {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  overflow: hidden;
+}
+body .fifthPage .contactUs form .textareaa label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  width: 25%;
+  height: 100%;
+  font-family: "Bad Script", cursive;
+}
+body .fifthPage .contactUs form .textareaa textarea {
+  padding: 5px;
+  width: 55%;
+  height: 100%;
+  resize: none;
+  font-size: 16px;
+  border: 0.5px solid rgba(0, 0, 0, 0.208);
+  outline: none;
+}
+body .sixthPage {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+body .sixthPage .lastMan {
+  display: none;
+}
+body .sixthPage .lastMan img {
+  width: 386px;
+  height: 646px;
+  z-index: 60000;
+}
+body .sixthPage .upr {
+  width: 100%;
+  height: 100%;
+}
+body .sixthPage .upr img {
+  width: 100%;
+  height: 100%;
+}
+body .sixthPage .social {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5vw;
+  align-items: center;
+  justify-content: space-around;
+}
+body .sixthPage .social img {
+  width: 30px;
+  height: 30px;
+}
+body .sixthPage .social .allsocial {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body .sixthPage .social .allsocial .allsocialUpr {
+  padding: 5px;
+  width: 75%;
+  height: 100%;
+  overflow: hidden;
+}
+body .sixthPage .social .allsocial .allsocialUpr a img {
+  width: 20px;
+  height: 20px;
+}
+body .sixthPage .social .allsocial .allsocialUpr p {
+  font-size: 16px;
+}
+body .sixthPage .social .allsocial .allsocialdwn {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .sixthPage .social .allsocial .allsocialdwn a {
+  width: 30px;
+  height: 30px;
+  margin: 8px;
+}
+body .sixthPage .social .allsocial .allsocialdwn a:hover {
+  transform: scale(1.3);
+}
+body .sixthPage .social .link {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+body .sixthPage .social .link ul {
+  list-style: none;
+  display: flex;
+}
+body .sixthPage .social .link ul li {
+  margin: 15px;
+}
+body .sixthPage .social .link ul li a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.881);
+}
+body .sixthPage .social .link ul li a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid white;
+}
+body .footer {
+  background-color: rgb(0, 102, 255);
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(71, 68, 68, 0.204);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}/*# sourceMappingURL=index.css.map */
